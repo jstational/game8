@@ -4,3 +4,5 @@ Mindustry mod
 
 Highly inspired by Steamworks, its such a good mod
 Also some influence from Asthosus
+
+Im trying to learn Java and Javascript, i might try C or C++ next
