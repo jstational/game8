@@ -1,6 +1,5 @@
 package game8.blocks.production
 
-import arc..math.geom.Vec2;
 import mindustry.world.blocks.environment.Floor;
 import mindustry.world.blocks.enviironment.StaticWall
 import arc.struct.Seq;
