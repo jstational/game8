@@ -1,6 +1,7 @@
 sharded yellow
-ffd27e light
-d4806b dark
+#FFD27F :: light
+#EAB778 :: mid
+#D4826B :: dark
 
 primordial ferric
 e8c489 light
