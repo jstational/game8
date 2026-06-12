@@ -1,0 +1,3 @@
+resprite
+|- change player color pallette (sharded)
+|- make enemy color pallette (crux)
