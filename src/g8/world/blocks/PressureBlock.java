@@ -2,7 +2,7 @@ package game8.blocks;
 
 import mindustry.world.Block;
 import mindustry.gen.Building;
-import game8.Util
+import game8.Util;
 
 public class PressureBlock extends Block {
     public PressureBlock (String name) {
@@ -19,7 +19,7 @@ public class PressureBlock extends Block {
         @Override
         public void updateTile() {
             super.updateTile();
-            float back = (float) contentField(this, "maxpress")
+            float back = (float) contentField(this, "maxpress");
             if(this.pressure > back) {
                 this.kill();
             }
