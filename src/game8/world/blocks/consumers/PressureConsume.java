@@ -7,46 +7,42 @@ import arc.scene.ui.layout.Table;
 import game8.world.blocks.PressureCrafter;
 import game8.blocks.*;
 import game8.world.blocks.PressureBlock;
+import game8.Util;
 
 public class PressureConsume extends Consume {
     public Vec2 pressreq;
     public boolean recAT;
-    public void output(float amt) {
-    }
+    public boolean consumeThis;
     @Override
     public void display(Building build, Table table) {
     }
     @Override
     public boolean valid(Building build) {
-        if (build.block instanceof PressureBlock block) {
-            if (build instanceof Building.PressureBuilding bld) {
-                if (block.recAT == true) {
-                    if (bld.presssys.willACT == true) {
-                        if (bld.pressure >= block.pressreq.y) {
-                            bld.presssys.willACT = false;
-                            return true;
-                        }
-                    } else {
-                        if (bld.pressure >= block.pressreq.x) {
-                            bld.presssys.willACT = true;
-                        }
+        if ((boolean) Util.contentField(build, "consumeThis") == true) {
+            if (((boolean) Util.contentField(build, "recAT")) == true) {
+                if (build.PressureInternal.willACT == true) {
+                    if (build.pressure >= ((Vec2) Util.contentField(build, "pressreq")).y) {
+                        build.PressureInternal.willACT = false;
+                        return true;
                     }
                 } else {
-                    if (bld.presssys.willACT == false) {
-                        if (bld.pressure <= block.pressreq.x) {
-                            bld.presssys.willACT = true;
-                        }
-                    } else {
-                        if (bld.pressure >= block.pressreq.y) {
-                            bld.presssys.willACT = false;
-                            return true;
-                        }
+                    if (build.pressure >= ((Vec2) Util.contentField(build, "pressreq")).x) {
+                        build.PressureInternal.willACT = true;
                     }
                 }
-                return false;
             } else {
-                return false;
+                if (build.PressureInternal.willACT == false) {
+                    if (build.pressure <= ((Vec2) Util.contentField(build, "pressreq")).x) {
+                        build.PressureInternal.willACT = true;
+                    }
+                } else {
+                    if (build.pressure >= ((Vec2) Util.contentField(build, "pressreq")).y) {
+                        build.PressureInternal.willACT = false;
+                        return true;
+                    }
+                }
             }
+            return false;
         } else {
             return true;
         }

@@ -1,4 +1,15 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://repo.spongepowered.org/repository/maven-public/" }
+    }
+    dependencies {
+        classpath "org.spongepowered:mixingradle:0.7-SNAPSHOT"
+    }
+}
+
 apply plugin: "java"
+apply plugin: "org.spongepowered.mixin"
 
 version = '1.0'
 
@@ -48,6 +59,7 @@ ext{
 
 dependencies{
     compileOnly mindustryVersion == "be" ? "Anuken:MindustryBuilds:latest" : "Anuken:Mindustry:$mindustryVersion"
+    annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 
 tasks.register('jarAndroid'){
@@ -79,16 +91,12 @@ jar{
         configurations.runtimeClasspath.collect{ it.isDirectory() ? it : zipTree(it) }
     }
 
-    from(projectDir){
-        include "mod.json" // mod.json
-    }
-
     from("assets/"){
         include "**"
     }
 
     from("jsonw/"){
-        include "content" // content folder so i dont need loadContent anymore
+        include "**"
     }
 }
 
@@ -105,4 +113,8 @@ tasks.register('deploy', Jar){
             delete "build/libs/${projectName}Android.jar"
         }
     }
+}
+
+mixin {
+    add sourceSets.main, file("{$projectDir}/jsonw/game8.mixins.json").absolutePath
 }

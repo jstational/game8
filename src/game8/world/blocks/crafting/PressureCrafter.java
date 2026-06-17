@@ -4,4 +4,5 @@ import game8.world.consumers;
 import mindustry.gen.world;
 
 public class PressureCrafter extends PressureBlock {
+    // TODO
 }
