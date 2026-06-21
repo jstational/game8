@@ -20,7 +20,7 @@ public class PressureSystem {
     public PressureSystem(Grouping blds) {}
 
     public PressureSystem StaticNewSystem(Building build) {
-        Grouping.getGrouping(build, "HasPressure", (Object) true);
+        Grouping.getGrouping(build, "hasPressure", (Object) true);
     }
     public void DynamicNewSystem(Building build) {}
     public void Update(Building build) {}
