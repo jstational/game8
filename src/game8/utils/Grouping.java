@@ -1,7 +1,8 @@
 package game8.utils;
 
 import arc.struct.Seq;
-import game8.utils;
+import static game8.utils.isInstanceOf;
+import static game8.utils.contentField;
 import mindustry.gen.Building;
 import mindustry.world.Block;
 import arc.math.IntSet;
@@ -18,7 +19,7 @@ public class Grouping {
     }
 
     @SafeVarargs
-    public Grouping getGrouping(Building build, Class<? extends Block>... classes) {
+    public static Grouping getGrouping(Building build, Class<? extends Block>... classes) {
         Grouping group = new Grouping();
         Seq<Building> track = new Seq<>();
         IntSet trackPos = new IntSet();
@@ -39,7 +40,7 @@ public class Grouping {
         }
         return group;
     }
-    public Grouping getGrouping(Building build, String field, Object fcont) {
+    public static Grouping getGrouping(Building build, String field, Object fcont) {
         Grouping group = new Grouping();
         Seq<Building> track = new Seq<>();
         IntSet trackPos = new IntSet();

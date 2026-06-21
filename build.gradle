@@ -116,5 +116,5 @@ tasks.register('deploy', Jar){
 }
 
 mixin {
-    add sourceSets.main, file("{$projectDir}/jsonw/game8.mixins.json").absolutePath
+    add sourceSets.main, file("${projectDir}/jsonw/game8.mixins.json").absolutePath
 }
