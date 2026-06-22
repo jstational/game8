@@ -13,26 +13,26 @@ public class PressureConsume extends Consume {
     public boolean consumePressure;
     @Override
     public boolean valid(Building build) {
-        if ((boolean) Util.contentField(build, "consumePressure") == true) {
-            if ((int) (Util.contentField(build, "actAT")) == 0) {
-                if (build.willACT == true) {
+        if ((Boolean) Util.contentField(build, "consumePressure") == true) {
+            if ((int) (Util.contentField(build, "ActAT")) == 0) {
+                if (build.WillACT == true) {
                     if (PLACEHOLDER_PRESSURESYSTEM >= ((Press2) Util.contentField(build, "pressreq")).greatest) {
-                        build.willACT = false;
+                        build.WillACT = false;
                         return true;
                     }
                 } else {
                     if (PLACEHOLDER_PRESSURESYSTEM >= ((Press2) Util.contentField(build, "pressreq")).least) {
-                        build.willACT = true;
+                        build.WillACT = true;
                     }
                 }
             } else {
-                if (build.willACT == false) {
+                if (build.WillACT == false) {
                     if (PLACEHOLDER_PRESSURESYSTEM <= ((Press2) Util.contentField(build, "pressreq")).least) {
-                        build.willACT = true;
+                        build.WillACT = true;
                     }
                 } else {
                     if (PLACEHOLDER_PRESSURESYSTEM >= ((Press2) Util.contentField(build, "pressreq")).greatest) {
-                        build.willACT = false;
+                        build.WillACT = false;
                         return true;
                     }
                 }

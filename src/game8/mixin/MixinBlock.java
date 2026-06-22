@@ -16,4 +16,5 @@ public abstract class MixinBlock extends UnlockableContent implements PressureBl
     @Unique public @NoPatch boolean hasPressure = false;
     @Unique public float Volume = 0;
     @Unique public Press2 MaxPress = new Press2(0,0);
+    @Unique public int ActAT = 1;
 }
