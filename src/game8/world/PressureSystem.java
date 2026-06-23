@@ -11,7 +11,7 @@ import game8.utils.Grouping;
  * This will have merging two or more PressureSystems based on a single Building, Splitting into more PressureSystems based on a Building contained in the PressureSystem 
  * This should ONLY be obtained by Building.PressureSystem.
  * It should always call Update on split or merge. 
- * To get SystemPressure, it should calculate the total output of ALL PressureGenerators in the system divided by ( The total volume of all blocks + 1 ). */
+ * To get SystemPressure, it should calculate the total output of ALL PressureGenerators in the system passed into PressFormula. */
 // oh no not this again
 // I dont know a single thing about dynamic stuff
 // how do i obtain a pressuresystem of a building without checking every time?
@@ -19,6 +19,10 @@ import game8.utils.Grouping;
 
 public class PressureSystem {
     private final Grouping buildings;
+
+    public float PressFormula(float pressure, float volume) {
+        return (pressure / (volume + 1f))
+    }
 
     public PressureSystem(Grouping builds) {
         this.buildings = builds;
@@ -33,7 +37,9 @@ public class PressureSystem {
     public static float SystemPressure(PressureSystem system) {
         return 0f;
     }
+    /** what about looping through all PressureGenerators in system and doing total output of all pressuregenerators and into PressFormula */
     public static float SystemVolume(PressureSystem system) {
         return 0f;
     }
+    /** just totaling the volume content field in all the blocks in system? */
 }
