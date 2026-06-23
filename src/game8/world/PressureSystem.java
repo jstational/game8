@@ -27,10 +27,13 @@ public class PressureSystem {
     public static PressureSystem getSystem(Building build) {
         return new PressureSystem(Grouping.getGrouping(build, "hasPressure", (Object) true));
     }
-    public static void Update(Building build) {}
-    public static void Merge(Building build) {}
-    public static void Split(Building build) {}
+    public static void Update(Building build) {
+        PressureSystem build.PressSystem = getSystem(build)
+    }
     public static float SystemPressure(PressureSystem system) {
+        return 0f;
+    }
+    public static float SystemVolume(PressureSystem system) {
         return 0f;
     }
 }
