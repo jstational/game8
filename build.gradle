@@ -8,6 +8,8 @@ sourceSets.main.resources.srcDirs += ["jsonw"]
 repositories{
     mavenCentral()
 
+    maven { url "https://repo.spongepowered.org/repository/maven-public/" }
+
     //Downloads the dependencies JAR file from Mindustry releases; does not use any real repository. Surprisingly, this is the most reliable option.
     ivy{
         url = 'https://github.com/'
