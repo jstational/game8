@@ -21,7 +21,7 @@ public class PressureSystem {
     private final Grouping buildings;
 
     private float PressFormula(float pressure, float volume) {
-        return (pressure / (volume + 1f))
+        return (pressure / (volume + 1f));
     }
 
     public PressureSystem(Grouping builds) {
@@ -32,7 +32,7 @@ public class PressureSystem {
         return new PressureSystem(Grouping.getGrouping(build, "hasPressure", (Object) true));
     }
     public static void Update(Building build) {
-        PressureSystem build.PressSystem = getSystem(build)
+        PressureSystem build.PressSystem = getSystem(build);
     }
     public static float SystemPressure(PressureSystem system) {
         float totalOutput = 0f;

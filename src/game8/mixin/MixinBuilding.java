@@ -19,7 +19,7 @@ public abstract class MixinBuilding {
     @Inject(method = "updateTile", at = @At("HEAD"))
     public void updateTile(CallbackInfo ci) {
         if((this.systemPressure() > ContentField(this, "MinMaxPress").greatest || this.systemPressure() < ContentField(this, "MinMaxPress").least) && ContentField(this, "hasPressure") == true) {
-            this.kill;
+            this.kill();
         }
     }
     @Inject(method = "onProximityUpdate", at = @At("TAIL"))
