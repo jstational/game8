@@ -1,15 +1,4 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven { url "https://repo.spongepowered.org/repository/maven-public/" }
-    }
-    dependencies {
-        classpath "org.spongepowered:mixingradle:0.7-SNAPSHOT"
-    }
-}
-
 apply plugin: "java"
-apply plugin: "org.spongepowered.mixin"
 
 version = '1.0'
 
@@ -113,8 +102,4 @@ tasks.register('deploy', Jar){
             delete "build/libs/${projectName}Android.jar"
         }
     }
-}
-
-mixin {
-    add sourceSets.main, file("${projectDir}/jsonw/game8.mixins.json").absolutePath
 }
