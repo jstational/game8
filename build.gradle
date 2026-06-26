@@ -8,8 +8,6 @@ sourceSets.main.resources.srcDirs += ["jsonw"]
 repositories{
     mavenCentral()
 
-    maven { url "https://repo.spongepowered.org/repository/maven-public/" }
-
     //Downloads the dependencies JAR file from Mindustry releases; does not use any real repository. Surprisingly, this is the most reliable option.
     ivy{
         url = 'https://github.com/'
@@ -50,7 +48,6 @@ ext{
 
 dependencies{
     compileOnly mindustryVersion == "be" ? "Anuken:MindustryBuilds:latest" : "Anuken:Mindustry:$mindustryVersion"
-    annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 
 tasks.register('jarAndroid'){
