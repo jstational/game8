@@ -1,9 +1,18 @@
-# Mindustry mod
-### Made by a newbie
-### Not a serious project, just for some fun
+<p align ="center">
+[ insert game8 banner here ]
+  </p>
 
-Highly inspired by Steamworks, and Carpe Diem, Both are such good mods
+<p align ="center">
+    <a href="https://github.com/jstational/Game8/stargazers"><alt="Stars"></a>
+  </p>
 
-Also some influence from Asthosus
+---
 
-  Im trying to learn Java, i might try C or C++ next
+Weird **cool mod** i made!!!
+
+> still working on this mod     
+> and that means **wip**
+
+---
+
+version ****0a****
