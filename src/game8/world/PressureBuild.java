@@ -1,4 +1,4 @@
-package game8.interfaces;
+package game8.world;
 
 import arc.struct.Seq;
 import mindustry.gen.Building;
