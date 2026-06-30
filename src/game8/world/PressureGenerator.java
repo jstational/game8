@@ -2,4 +2,7 @@ package game8.world;
 
 import game8.world.*;
 
-public interface PressureGenerator extends PressureBuild {}
+public interface PressureGenerator extends PressureBuild {
+    float Gen;
+    boolean IsPressureGenerator = true;
+}
