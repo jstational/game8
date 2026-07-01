@@ -4,5 +4,5 @@ import mindustry.gen.Building;
 import mindustry.world.Block;
 
 public class InterregionalPayloadLauncher extends Block {
-    public class InterregionalPayloadLauncherBuild extends Build {}
+    public class InterregionalPayloadLauncherBuild extends Building {}
 }

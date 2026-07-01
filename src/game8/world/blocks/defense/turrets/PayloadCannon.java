@@ -4,5 +4,5 @@ import mindustry.world.Block;
 import mindustry.gen.Building;
 
 public class PayloadCannon extends Block {
-    public class PayloadCannonBuild extends Build {}
+    public class PayloadCannonBuild extends Building {}
 }
