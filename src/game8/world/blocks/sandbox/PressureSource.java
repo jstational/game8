@@ -5,5 +5,8 @@ import mindustry.world.Block;
 import mindustry.gen.Building;
 
 public class PressureSource extends Block {
+    public PressureSource(String name) {
+        super(name);
+    }
     public class PressureSourceBuild extends Building implements PressureGenerator {}
 }

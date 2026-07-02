@@ -5,5 +5,12 @@ import game8.world.blocks.defense.turrets.*;
 import game8.world.*;
 
 public class PressurePayloadCannon extends PayloadCannon {
-    public class PressurePayloadCannonBuild extends PayloadCannonBuild implements PressureBuild {}
+    public PressurePayloadCannon(String name) {
+        super(name);
+    }
+    public class PressurePayloadCannonBuild extends PayloadCannonBuild implements PressureBuild {
+        public float Pressure;
+        @Override
+        public float Pressure() {}
+    }
 }

@@ -7,4 +7,5 @@ public interface PressureBuild {
     Seq<Building> System();
     Float Pressure();
     Float Volume();
+    Float PressVol();
 }

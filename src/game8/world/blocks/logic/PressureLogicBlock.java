@@ -5,6 +5,11 @@ import mindustry.gen.Building;
 import mindustry.logic.*;
 
 public class PressureLogicBlock extends Block {
+
+    public PressureLogicBlock(String name) {
+        super(name);
+    }
+    
     // you should be able to obtain these from an link:
     /** Pressure, Health, Ammo, Items, Liquids, ItemsCount, LiquidsCount, amt of a certain item, amt of a certain liquid */
     public static class PressureLogicLink {
