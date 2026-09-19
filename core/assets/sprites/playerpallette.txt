@@ -1,0 +1,14 @@
+sharded yellow
+#FFD27F :: light
+#EAB778 :: mid
+#D4826B :: dark
+
+metallic
+#a4acba :: light
+#6d727a :: mid
+#35373b :: dark
+
+metallic / silicon
+#d4d5d6 :: light
+#838485 :: mid
+#393a3b :: dark

@@ -1,0 +1,16 @@
+{
+    "name": "g8",
+
+    "displayName": "game8",
+    "author": "jstational",
+    "version": "0.0.1",
+    "description": "mod",
+    "subtitle": "",
+
+    "hidden": true,
+    "minGameVersion": "160.4",
+
+    "java": true,
+    "main": "g8.Game8",
+    "hideBrowser": true
+}
