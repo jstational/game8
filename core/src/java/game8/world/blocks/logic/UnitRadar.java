@@ -19,7 +19,7 @@ public class UnitRadar extends Block {
         public void configureAny(Object value) {
             super.configureAny(value);
             /** TODO what this might do on a server? */
-            if (!interactable(player.team())) return;
+            if(!interactable(player.team())) return;
             this.detectsAllies = !this.detectsAllies;
         }
     }
