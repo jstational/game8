@@ -84,7 +84,7 @@ val dex = tasks.register("dex") {
         val classpaths = configurations.compileClasspath.get().files + configurations.runtimeClasspath.get().files + File(androidJar)
         
         val commands = mutableListOf(
-            d8Path, "--min-api", "14", "--output", buildDir("libs/dex.zip").absolutePath, jar.get().archiveFile.get().asFile.absolutePath
+            d8Path, "--min-api", "14", "--output", buildFile("libs/dex.zip").absolutePath, jar.get().archiveFile.get().asFile.absolutePath
         )
 
         classpaths.forEach { file ->
