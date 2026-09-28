@@ -11,7 +11,7 @@ public class PressurePayloadRadarCannon extends PressurePayloadCannon {
     public float reloadAt = 0f;
     public boolean shootMin = false;
 
-    public PressurePayloadCannon(String name) {
+    public PressurePayloadRadarCannon(String name) {
         super(name);
     }
 
