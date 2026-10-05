@@ -7,15 +7,11 @@ import game8.world.blocks.*;
 import mindustry.world.blocks.payloads.Payload;
 
 public class PressurePayloadRadarCannon extends PressurePayloadCannon {
-    public float shootAt = 0f;
-    public float reloadAt = 0f;
-    public boolean shootMin = false;
-
     public PressurePayloadRadarCannon(String name) {
         super(name);
     }
 
-    public class PressurePayloadRadarCannonBuild extends PressurePayloadCannonBuild {
+    public class PressurePayloadRadarCannonBuild extends PressurePayloadCannonBuild implements PressureBuild {
         @Override
         public void shoot(float x, float y, Payload payload) {
             super.shoot(x, y, payload);
