@@ -12,8 +12,5 @@ public class PayloadWelder extends Block {
     
     public class PayloadWelderBuild extends Building {
         public PayloadWelder block;
-        
-        public int weldPercent;
-        public Payload payload;
     }
 }
